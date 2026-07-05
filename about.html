@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | ZAK Medical & Dental Care</title>
+<meta name="description" content="Learn about ZAK Medical & Dental Care in DHA Phase II, Islamabad — our mission, values and the team behind your care.">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
+
+<style>
+/* ===== Shared design system (see index.html for full documentation) ===== */
+:root{
+  --primary:#0D6EFD; --primary-dark:#0b5ed7; --secondary:#13C5DD; --accent:#20C997;
+  --bg:#F8FBFF; --dark:#1D3557; --white:#ffffff; --gray-600:#5b6b7f;
+  --radius-lg:28px; --radius-md:18px; --radius-sm:12px;
+  --shadow-soft:0 10px 40px -10px rgba(13,110,253,.18);
+  --shadow-card:0 8px 30px rgba(29,53,87,.08);
+  --transition:cubic-bezier(.4,0,.2,1);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--dark);overflow-x:hidden;line-height:1.7;}
+h1,h2,h3,h4,h5{font-family:'Poppins',sans-serif;font-weight:700;color:var(--dark);}
+a{text-decoration:none;}
+::selection{background:var(--accent);color:#fff;}
+@media (prefers-reduced-motion: reduce){*{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important;}}
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{outline:3px solid var(--secondary);outline-offset:2px;}
+
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--primary);background:rgba(13,110,253,.08);padding:7px 16px;border-radius:50px;margin-bottom:14px;}
+.eyebrow i{color:var(--accent);}
+.section-title{font-size:clamp(1.8rem,3.5vw,2.6rem);margin-bottom:14px;letter-spacing:-.02em;}
+.section-sub{color:var(--gray-600);max-width:640px;font-size:1.02rem;}
+.text-gradient{background:linear-gradient(100deg,var(--primary) 10%, var(--secondary) 55%, var(--accent) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;}
+
+/* Navbar */
+.navbar{padding:20px 0;transition:all .4s var(--transition);background:rgba(248,251,255,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);}
+.navbar.scrolled{padding:12px 0;background:rgba(255,255,255,.92);box-shadow:0 6px 30px rgba(29,53,87,.08);}
+.navbar-brand{font-weight:800;font-size:1.28rem;color:var(--dark) !important;display:flex;align-items:center;gap:10px;}
+.navbar-brand .brand-icon{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--primary),var(--secondary));display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.15rem;box-shadow:0 8px 20px -6px rgba(13,110,253,.55);}
+.navbar-brand span{font-size:.66rem;font-weight:500;color:var(--gray-600);letter-spacing:.06em;display:block;}
+.nav-link{font-weight:500;color:var(--dark) !important;margin:0 6px;position:relative;padding:8px 4px !important;}
+.nav-link::after{content:'';position:absolute;left:4px;right:4px;bottom:2px;height:2px;background:linear-gradient(90deg,var(--primary),var(--accent));transform:scaleX(0);transform-origin:left;transition:transform .3s var(--transition);}
+.nav-link:hover::after, .nav-link.active::after{transform:scaleX(1);}
+
+.btn-pill{border-radius:50px;font-weight:600;padding:12px 28px;border:none;position:relative;overflow:hidden;isolation:isolate;transition:transform .35s var(--transition), box-shadow .35s var(--transition);}
+.btn-pill::before{content:'';position:absolute;inset:0;z-index:-1;background:radial-gradient(circle at var(--x,50%) var(--y,50%), rgba(255,255,255,.35), transparent 60%);opacity:0;transition:opacity .3s;}
+.btn-pill:hover::before{opacity:1;}
+.btn-pill:hover{transform:translateY(-3px);}
+.btn-brand{background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;box-shadow:0 10px 25px -8px rgba(13,110,253,.6);}
+.btn-brand:hover{color:#fff;box-shadow:0 16px 32px -8px rgba(13,110,253,.7);}
+.btn-outline-brand{background:#fff;color:var(--primary);border:2px solid rgba(13,110,253,.18);}
+.btn-outline-brand:hover{color:var(--primary);border-color:var(--primary);box-shadow:0 10px 25px -10px rgba(13,110,253,.35);}
+.btn-accent{background:linear-gradient(135deg,var(--accent),var(--secondary));color:#fff;box-shadow:0 10px 25px -8px rgba(32,201,151,.55);}
+.btn-accent:hover{color:#fff;}
+.btn-sm-pill{padding:9px 20px;font-size:.88rem;}
+
+/* Page hero (smaller than home) */
+.page-hero{position:relative;padding:170px 0 100px;background:linear-gradient(-45deg,#eaf4ff,#f8fbff,#e7fbf7,#eef7ff);background-size:400% 400%;animation:gradientShift 16s ease infinite;overflow:hidden;text-align:center;}
+@keyframes gradientShift{0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
+.hero-blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.35;z-index:0;}
+.hero-blob.b1{width:420px;height:420px;background:var(--secondary);top:-140px;right:-100px;}
+.hero-blob.b2{width:340px;height:340px;background:var(--accent);bottom:-160px;left:-100px;}
+.page-hero h1{position:relative;z-index:2;font-size:clamp(2rem,4vw,3rem);animation:fadeUp .9s var(--transition) both;}
+.page-hero p{position:relative;z-index:2;color:var(--gray-600);max-width:560px;margin:0 auto;animation:fadeUp .9s .15s var(--transition) both;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
+
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s var(--transition), transform .8s var(--transition);}
+.reveal.in-view{opacity:1;transform:translateY(0);}
+
+.vital-divider{width:100%;height:56px;display:block;margin:0 auto;}
+.vital-divider path{fill:none;stroke:url(#vitalGrad);stroke-width:3;stroke-linecap:round;stroke-dasharray:1400;stroke-dashoffset:1400;animation:drawLine 3.2s ease-out forwards;}
+@keyframes drawLine{to{stroke-dashoffset:0;}}
+
+.section{padding:100px 0;}
+.section-sm{padding:70px 0;}
+.bg-soft{background:#fff;}
+
+/* Timeline */
+.timeline{position:relative;padding-left:40px;}
+.timeline::before{content:'';position:absolute;left:11px;top:6px;bottom:6px;width:2px;background:linear-gradient(180deg,var(--primary),var(--secondary),var(--accent));}
+.timeline-item{position:relative;padding-bottom:44px;}
+.timeline-item:last-child{padding-bottom:0;}
+.timeline-dot{position:absolute;left:-40px;top:2px;width:24px;height:24px;border-radius:50%;background:#fff;border:3px solid var(--primary);display:flex;align-items:center;justify-content:center;}
+.timeline-dot i{font-size:.7rem;color:var(--primary);}
+.timeline-card{background:#fff;border-radius:var(--radius-md);padding:24px 26px;box-shadow:var(--shadow-card);transition:transform .35s var(--transition);}
+.timeline-card:hover{transform:translateX(6px);}
+
+/* Value / feature cards */
+.card-glass{background:rgba(255,255,255,.75);backdrop-filter:blur(8px);border:1px solid rgba(13,110,253,.08);border-radius:var(--radius-md);padding:34px 28px;box-shadow:var(--shadow-card);transition:transform .4s var(--transition), box-shadow .4s var(--transition);height:100%;position:relative;overflow:hidden;}
+.card-glass:hover{transform:translateY(-10px);box-shadow:0 24px 50px -14px rgba(13,110,253,.28);}
+.card-icon{width:60px;height:60px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:#fff;margin-bottom:20px;background:linear-gradient(135deg,var(--primary),var(--secondary));box-shadow:0 10px 20px -6px rgba(13,110,253,.45);}
+.card-glass:nth-child(2) .card-icon{background:linear-gradient(135deg,var(--secondary),var(--accent));}
+.card-glass:nth-child(3) .card-icon{background:linear-gradient(135deg,var(--accent),#0d9c6f);}
+.card-glass:nth-child(4) .card-icon{background:linear-gradient(135deg,var(--dark),var(--primary));}
+
+/* Gallery */
+.gallery-item{border-radius:var(--radius-md);overflow:hidden;box-shadow:var(--shadow-card);position:relative;height:260px;}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--transition);}
+.gallery-item:hover img{transform:scale(1.1);}
+.gallery-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(29,53,87,.75));opacity:0;transition:opacity .4s;display:flex;align-items:flex-end;padding:18px;}
+.gallery-item:hover .gallery-overlay{opacity:1;}
+.gallery-overlay span{color:#fff;font-weight:600;font-size:.92rem;}
+
+/* Doctor section */
+.doctor-card{background:linear-gradient(135deg,var(--dark) 0%, #234876 100%);border-radius:var(--radius-lg);padding:0;overflow:hidden;color:#fff;box-shadow:0 30px 60px -20px rgba(29,53,87,.5);}
+.doctor-img-col{position:relative;overflow:hidden;min-height:340px;}
+.doctor-img-col img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;transition:transform .6s var(--transition);}
+.doctor-card:hover .doctor-img-col img{transform:scale(1.05);}
+.doctor-badge{position:absolute;bottom:18px;left:18px;background:rgba(255,255,255,.15);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.25);padding:8px 16px;border-radius:50px;font-size:.8rem;font-weight:600;display:flex;align-items:center;gap:6px;}
+
+/* Footer */
+footer{background:var(--dark);color:#cfe0f5;padding:70px 0 0;position:relative;}
+footer h5{color:#fff;font-weight:700;margin-bottom:20px;font-size:1.05rem;}
+footer a{color:#b8cbe6;transition:color .25s;}
+footer a:hover{color:var(--secondary);}
+.footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:16px;}
+.footer-list{list-style:none;padding:0;margin:0;}
+.footer-list li{margin-bottom:12px;}
+.footer-contact-item{display:flex;gap:12px;margin-bottom:16px;align-items:flex-start;}
+.footer-contact-item i{color:var(--secondary);margin-top:3px;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:50px;padding:22px 0;text-align:center;font-size:.85rem;color:#8fa8c9;}
+.footer-social a{width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.08);display:inline-flex;align-items:center;justify-content:center;margin-right:8px;transition:background .3s, transform .3s;}
+.footer-social a:hover{background:var(--secondary);transform:translateY(-3px);}
+
+.wa-float{position:fixed;bottom:26px;right:26px;z-index:1050;width:60px;height:60px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.6rem;box-shadow:0 10px 30px -6px rgba(37,211,102,.6);animation:pulseWa 2.4s infinite;}
+.wa-float:hover{color:#fff;transform:scale(1.08);}
+@keyframes pulseWa{0%{box-shadow:0 0 0 0 rgba(37,211,102,.55);}70%{box-shadow:0 0 0 18px rgba(37,211,102,0);}100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}}
+
+@media (max-width:991px){.page-hero{padding:150px 0 80px;}.section{padding:70px 0;}}
+</style>
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <span class="brand-icon"><i class="bi bi-heart-pulse-fill"></i></span>
+      <span>ZAK Medical & Dental Care<span>DHA Phase II · Islamabad</span></span>
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="bi bi-list fs-1"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+          <a class="btn btn-brand btn-pill btn-sm-pill" href="https://wa.me/923279707486?text=Hi%2C%20I%27d%20like%20to%20book%20an%20appointment%20at%20ZAK%20Medical%20%26%20Dental%20Care." target="_blank" rel="noopener">
+            <i class="bi bi-whatsapp me-1"></i> Book Appointment
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= PAGE HERO ================= -->
+<header class="page-hero">
+  <span class="hero-blob b1" aria-hidden="true"></span>
+  <span class="hero-blob b2" aria-hidden="true"></span>
+  <div class="container">
+    <div class="eyebrow" style="position:relative;z-index:2;"><i class="bi bi-info-circle"></i> About Us</div>
+    <h1>About <span class="text-gradient">ZAK Medical &amp; Dental Care</span></h1>
+    <p>A patient-first medical and dental clinic in Sector D, DHA Phase II, Islamabad — built around honest care and a calmer visit.</p>
+  </div>
+</header>
+
+<svg class="vital-divider" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true">
+  <defs><linearGradient id="vitalGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#0D6EFD"/><stop offset="50%" stop-color="#13C5DD"/><stop offset="100%" stop-color="#20C997"/></linearGradient></defs>
+  <path d="M0,30 L200,30 L230,10 L260,50 L290,30 L1200,30"/>
+</svg>
+
+<!-- ================= HISTORY / MISSION / VISION ================= -->
+<section class="section bg-soft">
+  <div class="container">
+    <div class="row g-5 align-items-start">
+      <div class="col-lg-5 reveal">
+        <div class="eyebrow"><i class="bi bi-clock-history"></i> Our Story</div>
+        <h2 class="section-title">How we <span class="text-gradient">got here</span></h2>
+        <p class="section-sub">ZAK Medical &amp; Dental Care was started with a simple idea: quality healthcare doesn't need to feel clinical and cold. It should feel personal — like visiting someone who genuinely cares about your wellbeing.</p>
+        <div class="timeline mt-5">
+          <div class="timeline-item">
+            <span class="timeline-dot"><i class="bi bi-flag-fill"></i></span>
+            <div class="timeline-card">
+              <h5 class="mb-1">Getting Started</h5>
+              <p class="mb-0 small text-secondary-emphasis">Opened our doors in Sector D, DHA Phase II with a focus on general medicine and dental care.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-dot"><i class="bi bi-tools"></i></span>
+            <div class="timeline-card">
+              <h5 class="mb-1">Growing Our Services</h5>
+              <p class="mb-0 small text-secondary-emphasis">Expanded to cover a full range of dental treatments — from fillings to implants — plus gynecology and aesthetic consultations.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-dot"><i class="bi bi-people-fill"></i></span>
+            <div class="timeline-card">
+              <h5 class="mb-1">Building Trust</h5>
+              <p class="mb-0 small text-secondary-emphasis">Became a familiar, trusted name for families across DHA Phase II, one appointment at a time.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7 reveal">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card-glass h-100">
+              <div class="card-icon"><i class="bi bi-bullseye"></i></div>
+              <h5>Our Mission</h5>
+              <p class="text-secondary-emphasis small mb-0">To provide accessible, affordable and attentive medical and dental care to every patient who walks through our door — regardless of how simple or complex their need.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card-glass h-100">
+              <div class="card-icon"><i class="bi bi-eye-fill"></i></div>
+              <h5>Our Vision</h5>
+              <p class="text-secondary-emphasis small mb-0">To be the most trusted community clinic in DHA Phase II — known equally for clinical quality and genuine patient care.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card-glass h-100">
+              <div class="card-icon"><i class="bi bi-hand-thumbs-up-fill"></i></div>
+              <h5>Integrity</h5>
+              <p class="text-secondary-emphasis small mb-0">Honest advice and transparent pricing, every single time — no unnecessary procedures, no surprises.</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card-glass h-100">
+              <div class="card-icon"><i class="bi bi-heart-fill"></i></div>
+              <h5>Compassion</h5>
+              <p class="text-secondary-emphasis small mb-0">Every patient is treated with patience, respect and genuine warmth, from check-in to check-out.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY PATIENTS CHOOSE US ================= -->
+<section class="section" style="background:linear-gradient(180deg,#fff,#eef6ff);">
+  <div class="container">
+    <div class="row justify-content-center text-center reveal">
+      <div class="col-lg-7">
+        <div class="eyebrow"><i class="bi bi-patch-check-fill"></i> Why Patients Choose Us</div>
+        <h2 class="section-title">Consistent care, <span class="text-gradient">every visit</span></h2>
+      </div>
+    </div>
+    <div class="row g-4 mt-4">
+      <div class="col-md-6 col-lg-3 reveal"><div class="card-glass text-center"><div class="card-icon mx-auto"><i class="bi bi-mortarboard-fill"></i></div><h5>Professional Staff</h5><p class="small text-secondary-emphasis mb-0">Trained, courteous staff at every step of your visit.</p></div></div>
+      <div class="col-md-6 col-lg-3 reveal"><div class="card-glass text-center"><div class="card-icon mx-auto"><i class="bi bi-building-fill"></i></div><h5>Modern Clinic</h5><p class="small text-secondary-emphasis mb-0">A clean, well-equipped space designed for comfort.</p></div></div>
+      <div class="col-md-6 col-lg-3 reveal"><div class="card-glass text-center"><div class="card-icon mx-auto"><i class="bi bi-person-heart"></i></div><h5>Personalized Care</h5><p class="small text-secondary-emphasis mb-0">Treatment plans tailored to your specific needs.</p></div></div>
+      <div class="col-md-6 col-lg-3 reveal"><div class="card-glass text-center"><div class="card-icon mx-auto"><i class="bi bi-cash-coin"></i></div><h5>Affordable Consultation</h5><p class="small text-secondary-emphasis mb-0">Fair, transparent pricing starting from Rs. 1,000.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section class="section bg-soft">
+  <div class="container">
+    <div class="row justify-content-center text-center reveal">
+      <div class="col-lg-7">
+        <div class="eyebrow"><i class="bi bi-images"></i> Clinic Gallery</div>
+        <h2 class="section-title">A look <span class="text-gradient">inside</span> our clinic</h2>
+      </div>
+    </div>
+    <div class="row g-4 mt-4">
+      <div class="col-md-4 reveal"><div class="gallery-item"><img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=700&q=80&auto=format&fit=crop" alt="Dental treatment chair and equipment"><div class="gallery-overlay"><span>Treatment Room</span></div></div></div>
+      <div class="col-md-4 reveal"><div class="gallery-item"><img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=700&q=80&auto=format&fit=crop" alt="Modern dental chair in operation"><div class="gallery-overlay"><span>Dental Suite</span></div></div></div>
+      <div class="col-md-4 reveal"><div class="gallery-item"><img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?w=700&q=80&auto=format&fit=crop" alt="Clinic reception waiting area"><div class="gallery-overlay"><span>Reception Area</span></div></div></div>
+      <div class="col-md-4 reveal"><div class="gallery-item"><img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?w=700&q=80&auto=format&fit=crop" alt="Interior of the dental clinic"><div class="gallery-overlay"><span>Clinic Interior</span></div></div></div>
+      <div class="col-md-4 reveal"><div class="gallery-item"><img src="https://images.unsplash.com/photo-1629909615184-74f495363b67?w=700&q=80&auto=format&fit=crop" alt="Dental instruments arranged for a procedure"><div class="gallery-overlay"><span>Sterile Instruments</span></div></div></div>
+      <div class="col-md-4 reveal"><div class="gallery-item"><img src="https://images.unsplash.com/photo-1666214280557-f1b5022eb634?w=700&q=80&auto=format&fit=crop" alt="Modern medical clinic hallway"><div class="gallery-overlay"><span>Clinic Hallway</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DOCTOR SECTION ================= -->
+<section class="section" style="background:linear-gradient(180deg,#eef6ff,#fff);">
+  <div class="container">
+    <div class="row justify-content-center text-center mb-5 reveal">
+      <div class="col-lg-6">
+        <div class="eyebrow"><i class="bi bi-person-badge-fill"></i> Meet Our Team</div>
+        <h2 class="section-title">The person behind <span class="text-gradient">your smile</span></h2>
+      </div>
+    </div>
+    <div class="row justify-content-center reveal">
+      <div class="col-lg-9">
+        <div class="doctor-card row g-0">
+          <div class="col-md-5 doctor-img-col">
+            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=700&q=80&auto=format&fit=crop" alt="Dr. Shagoofa Zulfiqar, dental professional at ZAK Medical & Dental Care">
+            <span class="doctor-badge"><i class="bi bi-patch-check-fill text-info"></i> Dental Care</span>
+          </div>
+          <div class="col-md-7 p-4 p-md-5 d-flex flex-column justify-content-center">
+            <h3 class="text-white mb-1">Dr. Shagoofa Zulfiqar</h3>
+            <p class="mb-3" style="color:#a9c4e6;">Dental Professional</p>
+            <p style="color:#dce8f7;">One of our experienced dental professionals, Dr. Shagoofa Zulfiqar takes time with every patient — walking through each step of treatment in plain language, so nothing feels uncertain or rushed.</p>
+            <div class="d-flex gap-4 mt-3 flex-wrap">
+              <div><i class="bi bi-check-circle-fill text-info me-1"></i><small>Patient-Centered</small></div>
+              <div><i class="bi bi-check-circle-fill text-info me-1"></i><small>Gentle Approach</small></div>
+              <div><i class="bi bi-check-circle-fill text-info me-1"></i><small>Clear Communication</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <div class="footer-brand">
+          <span class="brand-icon"><i class="bi bi-heart-pulse-fill"></i></span>
+          <strong class="text-white fs-5">ZAK Medical & Dental Care</strong>
+        </div>
+        <p class="small">Patient-centered medical and dental care in the heart of DHA Phase II, Islamabad.</p>
+        <div class="footer-social mt-3">
+          <a href="https://wa.me/923279707486" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h5>Quick Links</h5>
+        <ul class="footer-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html#services">Services</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-6">
+        <h5>Opening Hours</h5>
+        <div class="footer-contact-item"><i class="bi bi-clock-fill"></i><div>Monday – Sunday<br>4:00 PM – 8:00 PM</div></div>
+        <div class="footer-contact-item"><i class="bi bi-cash-coin"></i><div>Consultation from<br>Rs. 1,000</div></div>
+      </div>
+      <div class="col-lg-3">
+        <h5>Contact</h5>
+        <div class="footer-contact-item"><i class="bi bi-geo-alt-fill"></i><div>1st Floor, Office #4, Tipu Plaza #9 & 10, Tipu Boulevard South, Sector D, DHA Phase II, Islamabad</div></div>
+        <div class="footer-contact-item"><i class="bi bi-telephone-fill"></i><div>+92 327 9707486</div></div>
+        <a href="https://wa.me/923279707486" target="_blank" rel="noopener" class="btn btn-accent btn-pill btn-sm-pill mt-2"><i class="bi bi-whatsapp me-1"></i>Chat on WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; <span id="year"></span> ZAK Medical & Dental Care. All rights reserved. Sector D, DHA Phase II, Islamabad.</div>
+  </div>
+</footer>
+
+<a href="https://wa.me/923279707486?text=Hi%2C%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener" class="wa-float" aria-label="Chat with us on WhatsApp"><i class="bi bi-whatsapp"></i></a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40));
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); } });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  document.querySelectorAll('.btn-pill').forEach(btn => {
+    btn.addEventListener('mousemove', (e) => {
+      const r = btn.getBoundingClientRect();
+      btn.style.setProperty('--x', (e.clientX - r.left) + 'px');
+      btn.style.setProperty('--y', (e.clientY - r.top) + 'px');
+    });
+  });
+</script>
+</body>
+</html>

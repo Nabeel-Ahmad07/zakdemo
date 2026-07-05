@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | ZAK Medical & Dental Care</title>
+<meta name="description" content="Contact ZAK Medical & Dental Care in Sector D, DHA Phase II, Islamabad. Call, WhatsApp or send us a message to book your appointment.">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --primary:#0D6EFD; --primary-dark:#0b5ed7; --secondary:#13C5DD; --accent:#20C997;
+  --bg:#F8FBFF; --dark:#1D3557; --white:#ffffff; --gray-600:#5b6b7f;
+  --radius-lg:28px; --radius-md:18px; --radius-sm:12px;
+  --shadow-soft:0 10px 40px -10px rgba(13,110,253,.18);
+  --shadow-card:0 8px 30px rgba(29,53,87,.08);
+  --transition:cubic-bezier(.4,0,.2,1);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--dark);overflow-x:hidden;line-height:1.7;}
+h1,h2,h3,h4,h5{font-family:'Poppins',sans-serif;font-weight:700;color:var(--dark);}
+a{text-decoration:none;}
+::selection{background:var(--accent);color:#fff;}
+@media (prefers-reduced-motion: reduce){*{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important;}}
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{outline:3px solid var(--secondary);outline-offset:2px;}
+
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--primary);background:rgba(13,110,253,.08);padding:7px 16px;border-radius:50px;margin-bottom:14px;}
+.eyebrow i{color:var(--accent);}
+.section-title{font-size:clamp(1.8rem,3.5vw,2.6rem);margin-bottom:14px;letter-spacing:-.02em;}
+.section-sub{color:var(--gray-600);max-width:640px;font-size:1.02rem;}
+.text-gradient{background:linear-gradient(100deg,var(--primary) 10%, var(--secondary) 55%, var(--accent) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;}
+
+/* Navbar */
+.navbar{padding:20px 0;transition:all .4s var(--transition);background:rgba(248,251,255,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);}
+.navbar.scrolled{padding:12px 0;background:rgba(255,255,255,.92);box-shadow:0 6px 30px rgba(29,53,87,.08);}
+.navbar-brand{font-weight:800;font-size:1.28rem;color:var(--dark) !important;display:flex;align-items:center;gap:10px;}
+.navbar-brand .brand-icon{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--primary),var(--secondary));display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.15rem;box-shadow:0 8px 20px -6px rgba(13,110,253,.55);}
+.navbar-brand span{font-size:.66rem;font-weight:500;color:var(--gray-600);letter-spacing:.06em;display:block;}
+.nav-link{font-weight:500;color:var(--dark) !important;margin:0 6px;position:relative;padding:8px 4px !important;}
+.nav-link::after{content:'';position:absolute;left:4px;right:4px;bottom:2px;height:2px;background:linear-gradient(90deg,var(--primary),var(--accent));transform:scaleX(0);transform-origin:left;transition:transform .3s var(--transition);}
+.nav-link:hover::after, .nav-link.active::after{transform:scaleX(1);}
+
+.btn-pill{border-radius:50px;font-weight:600;padding:12px 28px;border:none;position:relative;overflow:hidden;isolation:isolate;transition:transform .35s var(--transition), box-shadow .35s var(--transition);}
+.btn-pill::before{content:'';position:absolute;inset:0;z-index:-1;background:radial-gradient(circle at var(--x,50%) var(--y,50%), rgba(255,255,255,.35), transparent 60%);opacity:0;transition:opacity .3s;}
+.btn-pill:hover::before{opacity:1;}
+.btn-pill:hover{transform:translateY(-3px);}
+.btn-brand{background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;box-shadow:0 10px 25px -8px rgba(13,110,253,.6);border:none;}
+.btn-brand:hover{color:#fff;box-shadow:0 16px 32px -8px rgba(13,110,253,.7);}
+.btn-outline-brand{background:#fff;color:var(--primary);border:2px solid rgba(13,110,253,.18);}
+.btn-outline-brand:hover{color:var(--primary);border-color:var(--primary);box-shadow:0 10px 25px -10px rgba(13,110,253,.35);}
+.btn-accent{background:linear-gradient(135deg,var(--accent),var(--secondary));color:#fff;box-shadow:0 10px 25px -8px rgba(32,201,151,.55);}
+.btn-accent:hover{color:#fff;}
+.btn-sm-pill{padding:9px 20px;font-size:.88rem;}
+
+.page-hero{position:relative;padding:170px 0 90px;background:linear-gradient(-45deg,#eaf4ff,#f8fbff,#e7fbf7,#eef7ff);background-size:400% 400%;animation:gradientShift 16s ease infinite;overflow:hidden;text-align:center;}
+@keyframes gradientShift{0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
+.hero-blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.35;z-index:0;}
+.hero-blob.b1{width:420px;height:420px;background:var(--secondary);top:-140px;right:-100px;}
+.hero-blob.b2{width:340px;height:340px;background:var(--accent);bottom:-160px;left:-100px;}
+.page-hero h1{position:relative;z-index:2;font-size:clamp(2rem,4vw,3rem);animation:fadeUp .9s var(--transition) both;}
+.page-hero p{position:relative;z-index:2;color:var(--gray-600);max-width:560px;margin:0 auto;animation:fadeUp .9s .15s var(--transition) both;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
+
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s var(--transition), transform .8s var(--transition);}
+.reveal.in-view{opacity:1;transform:translateY(0);}
+
+.vital-divider{width:100%;height:56px;display:block;margin:0 auto;}
+.vital-divider path{fill:none;stroke:url(#vitalGrad);stroke-width:3;stroke-linecap:round;stroke-dasharray:1400;stroke-dashoffset:1400;animation:drawLine 3.2s ease-out forwards;}
+@keyframes drawLine{to{stroke-dashoffset:0;}}
+
+.section{padding:90px 0;}
+.bg-soft{background:#fff;}
+
+/* Contact info card */
+.info-card{background:#fff;border-radius:var(--radius-lg);box-shadow:var(--shadow-card);padding:40px;height:100%;}
+.info-row{display:flex;gap:18px;margin-bottom:26px;}
+.info-row:last-child{margin-bottom:0;}
+.info-icon{min-width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--primary),var(--secondary));display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.2rem;flex-shrink:0;box-shadow:0 10px 20px -6px rgba(13,110,253,.4);}
+.info-row:nth-child(2) .info-icon{background:linear-gradient(135deg,var(--secondary),var(--accent));box-shadow:0 10px 20px -6px rgba(19,197,221,.4);}
+.info-row:nth-child(3) .info-icon{background:linear-gradient(135deg,var(--accent),#0d9c6f);box-shadow:0 10px 20px -6px rgba(32,201,151,.4);}
+.info-row:nth-child(4) .info-icon{background:linear-gradient(135deg,var(--dark),var(--primary));box-shadow:0 10px 20px -6px rgba(29,53,87,.4);}
+.info-row h6{margin-bottom:4px;font-weight:700;}
+.info-row p{margin-bottom:0;color:var(--gray-600);font-size:.94rem;}
+
+/* Form card */
+.form-card{background:#fff;border-radius:var(--radius-lg);box-shadow:var(--shadow-card);padding:40px;}
+.form-card .form-control{
+  border-radius:14px;border:1.5px solid #e3edf9;padding:13px 18px;font-size:.95rem;
+  transition:border-color .3s, box-shadow .3s;background:#fbfdff;
+}
+.form-card .form-control:focus{border-color:var(--primary);box-shadow:0 0 0 4px rgba(13,110,253,.1);background:#fff;}
+.form-card label{font-weight:600;font-size:.88rem;margin-bottom:6px;color:var(--dark);}
+.form-card .invalid-feedback{font-size:.8rem;}
+
+/* Map */
+.map-wrap{border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-card);}
+.map-wrap iframe{width:100%;height:420px;border:0;display:block;}
+
+/* Footer (shared) */
+footer{background:var(--dark);color:#cfe0f5;padding:70px 0 0;position:relative;}
+footer h5{color:#fff;font-weight:700;margin-bottom:20px;font-size:1.05rem;}
+footer a{color:#b8cbe6;transition:color .25s;}
+footer a:hover{color:var(--secondary);}
+.footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:16px;}
+.footer-list{list-style:none;padding:0;margin:0;}
+.footer-list li{margin-bottom:12px;}
+.footer-contact-item{display:flex;gap:12px;margin-bottom:16px;align-items:flex-start;}
+.footer-contact-item i{color:var(--secondary);margin-top:3px;}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:50px;padding:22px 0;text-align:center;font-size:.85rem;color:#8fa8c9;}
+.footer-social a{width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.08);display:inline-flex;align-items:center;justify-content:center;margin-right:8px;transition:background .3s, transform .3s;}
+.footer-social a:hover{background:var(--secondary);transform:translateY(-3px);}
+
+.wa-float{position:fixed;bottom:26px;right:26px;z-index:1050;width:60px;height:60px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.6rem;box-shadow:0 10px 30px -6px rgba(37,211,102,.6);animation:pulseWa 2.4s infinite;}
+.wa-float:hover{color:#fff;transform:scale(1.08);}
+@keyframes pulseWa{0%{box-shadow:0 0 0 0 rgba(37,211,102,.55);}70%{box-shadow:0 0 0 18px rgba(37,211,102,0);}100%{box-shadow:0 0 0 0 rgba(37,211,102,0);}}
+
+.toast{border-radius:16px;}
+
+@media (max-width:991px){.page-hero{padding:150px 0 70px;}.section{padding:60px 0;}.info-card,.form-card{padding:28px;}}
+</style>
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <span class="brand-icon"><i class="bi bi-heart-pulse-fill"></i></span>
+      <span>ZAK Medical & Dental Care<span>DHA Phase II · Islamabad</span></span>
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="bi bi-list fs-1"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+        <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+          <a class="btn btn-brand btn-pill btn-sm-pill" href="https://wa.me/923279707486?text=Hi%2C%20I%27d%20like%20to%20book%20an%20appointment%20at%20ZAK%20Medical%20%26%20Dental%20Care." target="_blank" rel="noopener">
+            <i class="bi bi-whatsapp me-1"></i> Book Appointment
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= PAGE HERO ================= -->
+<header class="page-hero">
+  <span class="hero-blob b1" aria-hidden="true"></span>
+  <span class="hero-blob b2" aria-hidden="true"></span>
+  <div class="container">
+    <div class="eyebrow" style="position:relative;z-index:2;"><i class="bi bi-chat-dots"></i> Get In Touch</div>
+    <h1>Contact <span class="text-gradient">Us</span></h1>
+    <p>Have a question or ready to book? Reach us on WhatsApp, call directly, or send a message below.</p>
+  </div>
+</header>
+
+<svg class="vital-divider" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true">
+  <defs><linearGradient id="vitalGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#0D6EFD"/><stop offset="50%" stop-color="#13C5DD"/><stop offset="100%" stop-color="#20C997"/></linearGradient></defs>
+  <path d="M0,30 L200,30 L230,10 L260,50 L290,30 L1200,30"/>
+</svg>
+
+<!-- ================= CONTACT SPLIT ================= -->
+<section class="section bg-soft">
+  <div class="container">
+    <div class="row g-5">
+      <!-- Left: contact info -->
+      <div class="col-lg-5 reveal">
+        <div class="info-card">
+          <div class="eyebrow"><i class="bi bi-info-circle"></i> Clinic Details</div>
+          <h3 class="mb-4">Reach Us Directly</h3>
+
+          <div class="info-row">
+            <span class="info-icon"><i class="bi bi-geo-alt-fill"></i></span>
+            <div>
+              <h6>Address</h6>
+              <p>1st Floor, Office #4, Attock Petroleum Service Road, Tipu Plaza #9 &amp; 10, Tipu Boulevard South, Sector D, DHA Phase II, Islamabad</p>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <span class="info-icon"><i class="bi bi-clock-fill"></i></span>
+            <div>
+              <h6>Opening Hours</h6>
+              <p>Monday – Sunday<br>4:00 PM – 8:00 PM</p>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <span class="info-icon"><i class="bi bi-cash-coin"></i></span>
+            <div>
+              <h6>Consultation Fee</h6>
+              <p>Starting from Rs. 1,000</p>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <span class="info-icon"><i class="bi bi-telephone-fill"></i></span>
+            <div>
+              <h6>Phone / WhatsApp</h6>
+              <p><a href="tel:+923279707486" class="text-dark fw-semibold">+92 327 9707486</a></p>
+            </div>
+          </div>
+
+          <a href="https://wa.me/923279707486?text=Hi%2C%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener" class="btn btn-brand btn-pill w-100 mt-3">
+            <i class="bi bi-whatsapp me-2"></i>Chat with Us on WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: form -->
+      <div class="col-lg-7 reveal">
+        <div class="form-card">
+          <div class="eyebrow"><i class="bi bi-envelope-paper"></i> Send a Message</div>
+          <h3 class="mb-2">We'll get back to you shortly</h3>
+          <p class="section-sub mb-4">Fill in your details and our team will reach out to confirm your appointment.</p>
+
+          <form id="contactForm" novalidate>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="nameInput">Full Name</label>
+                <input type="text" class="form-control" id="nameInput" placeholder="e.g. Ayesha Khan" required>
+                <div class="invalid-feedback">Please enter your name.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="phoneInput">Phone Number</label>
+                <input type="tel" class="form-control" id="phoneInput" placeholder="e.g. 0300 1234567" required pattern="^[0-9+\-\s]{7,15}$">
+                <div class="invalid-feedback">Please enter a valid phone number.</div>
+              </div>
+              <div class="col-12">
+                <label for="emailInput">Email Address</label>
+                <input type="email" class="form-control" id="emailInput" placeholder="e.g. you@example.com" required>
+                <div class="invalid-feedback">Please enter a valid email address.</div>
+              </div>
+              <div class="col-12">
+                <label for="messageInput">Message</label>
+                <textarea class="form-control" id="messageInput" rows="4" placeholder="Tell us what you'd like to book or ask about..." required></textarea>
+                <div class="invalid-feedback">Please enter a message.</div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-brand btn-pill w-100 py-3">
+                  <i class="bi bi-send-fill me-2"></i>Submit Message
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MAP ================= -->
+<section class="section" style="padding-top:0;background:linear-gradient(180deg,#fff,#eef6ff);">
+  <div class="container">
+    <div class="row justify-content-center text-center mb-4 reveal">
+      <div class="col-lg-6">
+        <div class="eyebrow"><i class="bi bi-map"></i> Find Us</div>
+        <h2 class="section-title">Located in <span class="text-gradient">Sector D, DHA Phase II</span></h2>
+      </div>
+    </div>
+    <div class="map-wrap reveal">
+      <iframe
+        src="https://www.google.com/maps?q=DHA%20Phase%202%2C%20Islamabad&output=embed"
+        allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        title="Map showing DHA Phase II, Islamabad">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <div class="footer-brand">
+          <span class="brand-icon"><i class="bi bi-heart-pulse-fill"></i></span>
+          <strong class="text-white fs-5">ZAK Medical & Dental Care</strong>
+        </div>
+        <p class="small">Patient-centered medical and dental care in the heart of DHA Phase II, Islamabad.</p>
+        <div class="footer-social mt-3">
+          <a href="https://wa.me/923279707486" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h5>Quick Links</h5>
+        <ul class="footer-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html#services">Services</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-6">
+        <h5>Opening Hours</h5>
+        <div class="footer-contact-item"><i class="bi bi-clock-fill"></i><div>Monday – Sunday<br>4:00 PM – 8:00 PM</div></div>
+        <div class="footer-contact-item"><i class="bi bi-cash-coin"></i><div>Consultation from<br>Rs. 1,000</div></div>
+      </div>
+      <div class="col-lg-3">
+        <h5>Contact</h5>
+        <div class="footer-contact-item"><i class="bi bi-geo-alt-fill"></i><div>1st Floor, Office #4, Tipu Plaza #9 & 10, Tipu Boulevard South, Sector D, DHA Phase II, Islamabad</div></div>
+        <div class="footer-contact-item"><i class="bi bi-telephone-fill"></i><div>+92 327 9707486</div></div>
+        <a href="https://wa.me/923279707486" target="_blank" rel="noopener" class="btn btn-accent btn-pill btn-sm-pill mt-2"><i class="bi bi-whatsapp me-1"></i>Chat on WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; <span id="year"></span> ZAK Medical & Dental Care. All rights reserved. Sector D, DHA Phase II, Islamabad.</div>
+  </div>
+</footer>
+
+<!-- Toast -->
+<div class="toast-container position-fixed bottom-0 end-0 p-4" style="z-index:1080;">
+  <div id="successToast" class="toast align-items-center text-white border-0" role="alert" aria-live="assertive" aria-atomic="true" style="background:linear-gradient(135deg,#20C997,#13C5DD);">
+    <div class="d-flex">
+      <div class="toast-body">
+        <i class="bi bi-check-circle-fill me-2"></i>Thank you! We'll contact you shortly.
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+</div>
+
+<a href="https://wa.me/923279707486?text=Hi%2C%20I%27d%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener" class="wa-float" aria-label="Chat with us on WhatsApp"><i class="bi bi-whatsapp"></i></a>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40));
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); } });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  document.querySelectorAll('.btn-pill').forEach(btn => {
+    btn.addEventListener('mousemove', (e) => {
+      const r = btn.getBoundingClientRect();
+      btn.style.setProperty('--x', (e.clientX - r.left) + 'px');
+      btn.style.setProperty('--y', (e.clientY - r.top) + 'px');
+    });
+  });
+
+  // Contact form — frontend-only validation + success toast
+  const form = document.getElementById('contactForm');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    if (!form.checkValidity()) {
+      form.classList.add('was-validated');
+      return;
+    }
+    const toastEl = document.getElementById('successToast');
+    const toast = bootstrap.Toast.getOrCreateInstance(toastEl, { delay: 5000 });
+    toast.show();
+    form.reset();
+    form.classList.remove('was-validated');
+  });
+</script>
+</body>
+</html>
